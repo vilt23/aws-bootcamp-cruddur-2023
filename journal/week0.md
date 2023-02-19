@@ -17,5 +17,10 @@ And run the command get caller identity as a demo
 ![get caller identity cli demo](assets/Week%200%20-%20Caller%20Identity.png)
 
 ### Creation of budget using CLI
-#### I also created the create a budget of $10 by running the budget.json script saved in the aws/json folder in the CLI. [budget.json script](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/budget.json)
+#### I created the create a budget of $10 by running the budget.json script saved in the aws/json folder in the CLI. [Budget.json script](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/budget.json) and [notify subscriber script](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/notifications-with-subscribers.json)
 ![budget.json script](assets/Week%200%20-%20Budget.png) 
+
+### Creation of Alarm and SNS topics
+#### I have also created the an SNS topic and an alarm to notify me when my sending are approaching the $10 threshold to prevent overspending using the same method as the budget creation. Find the link to the script here [Alarm script](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/alarm_config.json)
+![alarm in console](assets/Week%200%20-%20Alarm.png)
+![SNS topic in console](assets/Week%200%20-%20SNS%20topics.png)
