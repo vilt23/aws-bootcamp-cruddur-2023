@@ -24,3 +24,8 @@ And run the command get caller identity as a demo
 #### I have also created the an SNS topic and an alarm to notify me when my sending are approaching the $10 threshold to prevent overspending using the same method as the budget creation. Find the link to the script here [Alarm script](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/alarm_config.json)
 ![alarm in console](assets/Week%200%20-%20Alarm.png)
 ![SNS topic in console](assets/Week%200%20-%20SNS%20topics.png)
+
+### Homework Challenges
+#### As homework challenge, i am proposing some modification of the diagram to improve security and reliability.
+First i place a Web Application Firewall (WAF) before the load balancer to protect the application against attack. I have also place the front end and the back end containers inside autoscaling groups to be sure they will be able to handle traffic variations. I have also use some SQSs to decouple the app and prevent data loss while auto scaling groups are scaling up. Find the link to the lucidChart diagram here. [Homework Challenge LucidChart Diagram](https://lucid.app/lucidchart/7d11af48-bdf5-4e0a-82b6-83defb230f24/edit?viewport_loc=158%2C32%2C1615%2C991%2C0_0&invitationId=inv_f7d1a6c4-3267-42b8-aea1-526022eb8780)
+![Homework Challenge LucidChart Diagram](assets/Week%200%20-%20Week%20Challenge%20Diagram%20.png)
