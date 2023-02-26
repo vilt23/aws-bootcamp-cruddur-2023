@@ -31,3 +31,5 @@ And executed docker compose by right clicking the yml file and selecting " Compo
 ### Creating notification feature
 #### I edited the [openapi-3.0,yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/openapi-3.0.yml) file to insert the notification activity.
 ![openapi-3.0.yml](assets/Week%201%20-%20openapi.png)
+
+I created the notification service for the backend by creating the python file [notifications_activities.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/notifications_activities.py) and imported it in the [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) file.
