@@ -33,3 +33,6 @@ And executed docker compose by right clicking the yml file and selecting " Compo
 ![openapi-3.0.yml](assets/Week%201%20-%20openapi.png)
 
 I created the notification service for the backend by creating the python file [notifications_activities.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/notifications_activities.py) and imported it in the [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) file.
+In the frontend folder I created the [NotificationsFeedPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/NotificationsFeedPage.js) and mapped the the notification route in the [App.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/App.js) file. At the end I have been able to access the notification page in the website.
+
+![Notification Page](assets/Week%201%20-%20Notifications%20page.png)
