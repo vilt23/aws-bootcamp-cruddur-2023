@@ -37,6 +37,14 @@ In the frontend folder I created the [NotificationsFeedPage.js](https://github.c
 
 ![Notification Page](assets/Week%201%20-%20Notifications%20page.png)
 
+### Databases Installation
+
+#### I implemented the Postgres and DynamoDB serrvices and referencing a volume in the file [docker-compose.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/docker-compose.yml) in the project directory. I also installed the postgres client in the file [gitpod.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml) in that same directory. Next I install the postgres client extension for vscode and tested if postgres was working.
+
+![Postgres](assets/Week%201%20-%20PostgreSQL.png)
+![DynamoDB](assets/Week%201%20-%20DynamoDB.png)
+
+
 ### Week Challenge
 
 #### For the week challenge I tag the image of the backend and frontend containers in the gitpod environment and push them in my repo in DockerHub.
