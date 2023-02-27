@@ -36,3 +36,10 @@ I created the notification service for the backend by creating the python file [
 In the frontend folder I created the [NotificationsFeedPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/NotificationsFeedPage.js) and mapped the the notification route in the [App.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/App.js) file. At the end I have been able to access the notification page in the website.
 
 ![Notification Page](assets/Week%201%20-%20Notifications%20page.png)
+
+### Week Challenge
+
+#### For the week challenge I tag the image of the backend and frontend containers in the gitpod environment and push them in my repo in DockerHub.
+
+![Taging the containers](assets/Week%201%20-%20Docker%20tags.png)
+![Pushing image in dockerhub](assets/Week%201%20-%20DockerHub.png)
