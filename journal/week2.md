@@ -25,3 +25,8 @@ Right after i created the xray sampling group using the cli.
 ![sampling group](assets/Week2/Week%202%20-%20Sample%20group.png)
 
 ![consolo sampling group](assets/Week2/Week%202%20-%20Console%20Sample%20group.png)
+
+ And to finish I added the Deamon Service to file [docker-compose.yml](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-2-rollbar/docker-compose.yml) and executed a compose up. After this I started to log traces activities in my console.
+ 
+ ![traces](assets/Week2/Week%202%20-%20Console%20xray%20traces.png)
+
