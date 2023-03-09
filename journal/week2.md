@@ -10,3 +10,18 @@ Next in the python file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-
 At last, I set the HoneyComb API_KEY and SERVICE_NAME and started receiving the date in my honeycomb account.
 
 ![honeycomb data](assets/Week2/Week%202%20-%20Honeycomb%20data.png)
+
+### Instrument X-Ray
+
+#### First I set the environment variable AWS-REGION in gitpod. Next I inserted the command to install x-ray sdk in the file [requierement.txt](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/requirements.txt) in the backend directory and installe the requierment for the environment.
+Then of importing the necessary python librairies and defining the segment in the file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py).
+The next step consisted of creating the file [xray.json](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/json/xray.json) in the aws/json directory that will be use to create the cruddur sampling rule. Then creating the x-ray trace group in aws using the cli.
+
+![xray group](assets/Week2/Week%202%20-%20create%20aws%20service%20group.png)
+
+![xray group console](assets/Week2/Week%202%20-%20AWS%20xray%20trace%20group.png)
+
+Right after i created the xray sampling group using the cli.
+![sampling group](assets/Week2/Week%202%20-%20Sample%20group.png)
+
+![consolo sampling group](assets/Week2/Week%202%20-%20Console%20Sample%20group.png)
