@@ -22,6 +22,7 @@ The next step consisted of creating the file [xray.json](https://github.com/vilt
 ![xray group console](assets/Week2/Week%202%20-%20AWS%20xray%20trace%20group.png)
 
 Right after i created the xray sampling group using the cli.
+
 ![sampling group](assets/Week2/Week%202%20-%20Sample%20group.png)
 
 ![consolo sampling group](assets/Week2/Week%202%20-%20Console%20Sample%20group.png)
