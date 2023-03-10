@@ -41,3 +41,11 @@ Right after i created the xray sampling group using the cli.
 Next I implemented a custom logging in the [home_activity.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/home_activities.py) service of the backendand and passed the log variables in the functions. I then set the needed AWS environment variables in the [docker-compose.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/docker-compose.yml) file
 
 ![aws console cloudwatch log group](assets/Week2/Week%202%20-%20Cloudwatch%20log%20group.png)
+
+### Rollbar
+
+#### The requierement to add in the [requierement.txt]() and install to prepare the environment are blinker & rollbar. Next I set my rollbar access token in the gitpod environment and in the [docker-compose.yml]() file. Then in the file [app.py]() in the backend I imported the librairies rollbar, rollbar.contrib.flask and got_request_exception. And defined the section to initialize the pyrollbar package and the test endpoint for demonstration.
+
+![rollbar endpoint demo](assets/Week2/Week%202%20-%20Rollbar%20backend%20test.png)
+
+![rollbar console](assets/Week2/Week%202%20-%20Rollbar%20console.png)
