@@ -27,7 +27,12 @@ Right after i created the xray sampling group using the cli.
 
 ![consolo sampling group](assets/Week2/Week%202%20-%20Console%20Sample%20group.png)
 
- And to finish I added the Deamon Service to file [docker-compose.yml](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-2-rollbar/docker-compose.yml) and executed a compose up. After this I started to log traces activities in my console.
+ And to finish I added the Deamon Service to file [docker-compose.yml](https://github.com/omenking/aws-bootcamp-cruddur-2023/blob/week-2-rollbar/docker-compose.yml). Then I imported xray recorder and set up the segment recorder for the home page and the user activities section in the file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py)to capture events.In the python file [user_activities.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/user_activities.py) of the backend's services I implemented the segment and the mock-data subsegment of the activity page while making sure to close the subsegment. After this I run a compose up to launch the updated version of the app and started to log traces activities in my console.
  
  ![traces](assets/Week2/Week%202%20-%20Console%20xray%20traces.png)
+ 
+ 
+ ![subsegment](assets/Week2/Week%202%20-%20xray%20user%20activity%20sub%20segment.png)
+ 
+ 
 
