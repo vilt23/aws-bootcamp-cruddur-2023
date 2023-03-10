@@ -35,4 +35,9 @@ Right after i created the xray sampling group using the cli.
  ![subsegment](assets/Week2/Week%202%20-%20xray%20user%20activity%20sub%20segment.png)
  
  
+### Cloudwatch Logs
 
+#### I included watchtower in the file [requirement.txt](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/requirements.txt) and executed the pip install command to prepare the environment. Right after in the file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py), I imported watchtower, logging and strftime. I also configured the logger to use cloudwatch and defined a section to log an error after every request. 
+Next I implemented a custom logging in the [home_activity.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/home_activities.py) service of the backendand and passed the log variables in the functions. I then set the needed AWS environment variables in the [docker-compose.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/docker-compose.yml) file
+
+![aws console cloudwatch log group](assets/Week2/Week%202%20-%20Cloudwatch%20log%20group.png)
