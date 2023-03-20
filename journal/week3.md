@@ -1,5 +1,5 @@
 # Week 3 — Decentralized Authentication
-####This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented JWT token in the backend app. 
+#### This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented JWT token in the backend app. 
 
 
 ### Implementing Cognito in the App
@@ -7,11 +7,9 @@
 
 ![cognito poll](assets/week3/week%203%20-%20UserPool%20AWS%20Console.png)
 
-Then I proceeded by installing aws-amplify in the environment. And making sure to import the amplify librairy in every js file it will be used.
+Then I proceeded by installing aws-amplify in the environment. And making sure to import amplify or auth from aws-amplify librairy in every js file it will be used.
 
 ![amplify install](assets/week3/Week%203%20-%20Amplify%20install.png)
-
-![import amplify]()
 
 The next step consisted to import the librairy and configure amplify in the file [App.js]() in the frontend directory 
 ![configure amplify in appjs](assets/week3/Week%203%20-%20Amplify%20AppJs.png)
@@ -19,6 +17,16 @@ The next step consisted to import the librairy and configure amplify in the file
 And define the environment variables in the fille [docker-compose.yml]()
 ![docker compose env](assets/week3/Week%203%20-%20Env%20variables.png)
 
-I also implemented anplify in the frontend page [HomeFeedPage.js]()
+I also modified the authentication method using anplify in the frontend page [HomeFeedPage.js]()
+![Import auth homefeed](assets/week3/Week%203%20-%20Import%20HomeFeedJS.png)
+
 ![HomeFeedPage.js](assets/week3/Week%203%20-%20Auth%20HomeFeedJs.png)
 
+Next I modified the authentification method to use amplify instead of the token in [ProfileInfo.js]()
+
+![Import auth ProfileInfo](/assets/week3/Week%203%20-%20Import%20ProfileInfoJs.png)
+
+![ProfileInfo.js](assets/week3/Week%203%20-%20Signout%20ProfileInfoJs.png)
+
+I reconfigure the onsubmit function to use amplify auth in the page [signin.js]()
+![signin.js](assets/week3/Week%203%20-%20SigninPage.png)
