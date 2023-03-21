@@ -1,9 +1,9 @@
 # Week 3 — Decentralized Authentication
-#### This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented with JWT token in the backend app. 
+ This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented with JWT token in the backend app. 
 
 
 ## Implementing Cognito in the App
-#### First I created a cognito user pool in the aws console with email signin option and no MFA, making sure to include the attributes Name and preffered Username, to select cognito email as message delivery method and to set app client type to public.
+ First I created a cognito user pool in the aws console with email signin option and no MFA, making sure to include the attributes Name and preffered Username, to select cognito email as message delivery method and to set app client type to public.
 
 ![cognito poll](assets/week3/week%203%20-%20UserPool%20AWS%20Console.png)
 
@@ -59,7 +59,7 @@ THis allow to recover lost user password
 
 ## Implement authentication to backend
 
-#### To make the app more secure We need to protect the API endpoints by passing along the access token.
+ To make the app more secure We need to protect the API endpoints by passing along the access token.
 
 First I implemented the header in the frontend page file [homepage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/HomeFeedPage.js) to pass the access.
 
@@ -90,7 +90,7 @@ Then modified the component file [ProfileInfo.js](https://github.com/vilt23/aws-
 ![signout token](assets/week3/Week%203%20-%20Signout%20ProfileInfoJs.png)
 
 ## UI Improvement
-##### This section consist on some minor changes on the design of the app to increase visibility. The following task were made to improve contrast and make the segment more distinct. 
+ This section consist on some minor changes on the design of the app to increase visibility. The following task were made to improve contrast and make the segment more distinct. 
 To do so I modified the frontend file [index.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/index.css) to centrally manage the color variables and referenced them in the files [activityitem.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/ActivityItem.css), [DesktopSidebar.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/DesktopSidebar.css), [JoinSection.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/JoinSection.css), [App.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/App.css), [search.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/Search.css) and [SigninPage.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/SigninPage.css). Resulting in a more readable app design.
 
 ![improve ui](assets/week3/Week%203%20-%20Improved%20UI.png)
