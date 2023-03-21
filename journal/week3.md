@@ -1,5 +1,5 @@
 # Week 3 — Decentralized Authentication
-#### This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented JWT token in the backend app. 
+#### This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented with JWT token in the backend app. 
 
 
 ### Implementing Cognito in the App
