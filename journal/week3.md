@@ -57,7 +57,7 @@ THis allow to recover lost user password
 
 
 
-## Implement authentication to backendassets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png
+## Implement authentication to backend
 
 #### To make the app more secure We need to protect the API endpoints by passing along the access token.
 
