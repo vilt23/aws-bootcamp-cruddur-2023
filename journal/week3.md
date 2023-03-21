@@ -30,3 +30,27 @@ Next I modified the authentification method to use amplify instead of the token 
 
 I reconfigure the onsubmit function to use amplify auth in the page [signin.js]()
 ![signin.js](assets/week3/Week%203%20-%20SigninPage.png)
+
+In the file [signup.js]() I modified the onsubmit function to use cognito instead of token after importing auth from aws-amplify.
+
+![signup.js](assets/week3/Week%203%20-%20SignupJs.png)
+
+In the file [confirmationPage.js]() the functions resend_code and onsubmit has been modified.
+
+![confirmationpage.js](assets/week3/Week%203%20-%20ConfirmationJS.png)
+
+This allow the signup of the users in the app that will be store in AWS cognito pool and the signin of existing pool user.
+
+![signuppage](assets/week3/Week%203%20-%20Signup%20page.png)
+
+![userfeed](assets/week3/Week%203%20-%20Profile%20page.png)
+
+![signinpage](assets/week3/Week%203%20-%20Signin%20Error.png)
+
+And to finish, I modified the functions onsubmit_send_code and onsubmit_confirm_code in the file [recoverypage.js]()
+
+![recoverypage.js](assets/week3/Week%203%20-%20RecoveryPageJS.png)
+
+THis allow to recover lost user password
+
+![recoverypage](assets/week3/Week%203%20-%20Recovery%20page.png)
