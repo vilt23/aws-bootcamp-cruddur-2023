@@ -2,7 +2,7 @@
 #### This week is dedicated to decentralized authentication. We created AWS cognito Pools and immplemented it in the App. And experimented with JWT token in the backend app. 
 
 
-### Implementing Cognito in the App
+## Implementing Cognito in the App
 #### First I created a cognito user pool in the aws console with email signin option and no MFA, making sure to include the attributes Name and preffered Username, to select cognito email as message delivery method and to set app client type to public.
 
 ![cognito poll](assets/week3/week%203%20-%20UserPool%20AWS%20Console.png)
@@ -57,7 +57,7 @@ THis allow to recover lost user password
 
 
 
-### Implement authentication to backendassets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png
+## Implement authentication to backendassets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png
 
 #### To make the app more secure We need to protect the API endpoints by passing along the access token.
 
