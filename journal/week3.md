@@ -59,11 +59,13 @@ THis allow to recover lost user password
 
 #### To make the app more secure I need to protect the API endpoints by passing along the access token.
 
-First I implemented the header in the backend file [homepage.js]()
+First I implemented the header in the frontend page file [homepage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/HomeFeedPage.js) to pass the access.
 
 ![homepage.js](assets/week3/Week%203%20-%20Pass%20token%20from%20FrontEnd%20HomeFeedPageJS.png)
 
-Then in the the file [app.py] I redefined the home section and the corse and the cognito jwt token of the backend
+Then I implemented the librairy [cognito_jwt_token.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/cognito_jwt_token.py) in the lib directory of the backend. And insert Flask-AWSCognito in the [requirements.txt](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/requirements.txt) file to next be install in the environment.
+
+Then in the the file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) I imported AWSCognitoAuthentication from Flask-AWSCognito and the necessary function from the newly defined lib cognito_jwt_token.py. Next I modified the home section, the corse and the cognito jwt token of the backend
 
 ![home section](assets/week3/Week%203%20-%20backend%20home%20section%20AppJS.png)
 
@@ -72,7 +74,16 @@ Then in the the file [app.py] I redefined the home section and the corse and the
 ![cognito jwt token](assets/week3/Week%203%20-%20CognitoJwtToken%20Backend%20AppPY.png)
 
 
-Then I implemented the librairy [cognito_jwt_token.py]() in the lib directory of the backend. And insert Flask-AWSCognito in the [requirements.txt]() file to next be install in the environment.
-To proceed, I integrated the nececssary backend environment variables in the file [docker-compose.yml]()
+To proceed, I integrated the nececssary backend environment variables in the file [docker-compose.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/docker-compose.yml)
 
 ![docker-compose.yml](assets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png)
+
+Next I added an aditional result in the service file [home_activities.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/home_activities.py) and push it on top.
+
+![added resuslt](assets/week3/Week%20-%20Lore%20message%20in%20backend%20homeActivities.png)
+
+![new message](assets/week3/Week%203%20-%20hidden%20message.png)
+
+Then modified the component file [ProfileInfo.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/ProfileInfo.js) of the frontend to clear the token at signout.
+
+![signout token](assets/week3/Week%203%20-%20Signout%20ProfileInfoJs.png)
