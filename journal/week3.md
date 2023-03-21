@@ -54,3 +54,19 @@ And to finish, I modified the functions onsubmit_send_code and onsubmit_confirm_
 THis allow to recover lost user password
 
 ![recoverypage](assets/week3/Week%203%20-%20Recovery%20page.png)
+
+### Implement authentication to backend
+
+#### To make the app more secure I need to protect the API endpoints by passing along the access token.
+
+First I implemented the header in the backend file [homepage.js]()
+
+![homepage.js](assets/week3/Week%203%20-%20Pass%20token%20from%20FrontEnd%20HomeFeedPageJS.png)
+
+Then in the the file [app.py] I redefined the home section and the corse and the cognito jwt token of the backend
+
+![home section](assets/week3/Week%203%20-%20backend%20home%20section%20AppJS.png)
+
+![corse section](assets/week3/Week%203%20-%20Cors%20updae%20BackEnd%20AppPY.png)
+
+![cognito jwt token](assets/week3/Week%203%20-%20CognitoJwtToken%20Backend%20AppPY.png)
