@@ -24,7 +24,7 @@ I also modified the authentication method using anplify in the frontend page [Ho
 
 Next I modified the authentification method to use amplify instead of the token in [ProfileInfo.js]()
 
-![Import auth ProfileInfo](/assets/week3/Week%203%20-%20Import%20ProfileInfoJs.png)
+![Import auth ProfileInfo](assets/week3/Week%203%20-%20Import%20ProfileInfoJs.png)
 
 ![ProfileInfo.js](assets/week3/Week%203%20-%20Signout%20ProfileInfoJs.png)
 
@@ -43,9 +43,9 @@ This allow the signup of the users in the app that will be store in AWS cognito 
 
 ![signuppage](assets/week3/Week%203%20-%20Signup%20page.png)
 
-![userfeed](assets/week3/Week%203%20-%20Profile%20page.png)
-
 ![signinpage](assets/week3/Week%203%20-%20Signin%20Error.png)
+
+![userfeed](assets/week3/Week%203%20-%20Profile%20page.png)
 
 And to finish, I modified the functions onsubmit_send_code and onsubmit_confirm_code in the file [recoverypage.js]()
 
