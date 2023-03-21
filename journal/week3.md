@@ -55,7 +55,7 @@ THis allow to recover lost user password
 
 ![recoverypage](assets/week3/Week%203%20-%20Recovery%20page.png)
 
-### Implement authentication to backend
+### Implement authentication to backendassets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png
 
 #### To make the app more secure I need to protect the API endpoints by passing along the access token.
 
@@ -70,3 +70,9 @@ Then in the the file [app.py] I redefined the home section and the corse and the
 ![corse section](assets/week3/Week%203%20-%20Cors%20updae%20BackEnd%20AppPY.png)
 
 ![cognito jwt token](assets/week3/Week%203%20-%20CognitoJwtToken%20Backend%20AppPY.png)
+
+
+Then I implemented the librairy [cognito_jwt_token.py]() in the lib directory of the backend. And insert Flask-AWSCognito in the [requirements.txt]() file to next be install in the environment.
+To proceed, I integrated the nececssary backend environment variables in the file [docker-compose.yml]()
+
+![docker-compose.yml](assets/week3/Week%203%20-%20BackEnd%20cognito%20id%20DockeComposeYML.png)
