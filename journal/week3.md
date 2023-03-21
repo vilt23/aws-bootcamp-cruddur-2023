@@ -93,5 +93,5 @@ Then modified the component file [ProfileInfo.js](https://github.com/vilt23/aws-
 ##### This section consist on some minor changes on the design of the app to increase visibility. The following task were made to improve contrast and make the segment more distinct. 
 To do so I modified the frontend file [index.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/index.css) to centrally manage the color variables and referenced them in the files [activityitem.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/ActivityItem.css), [DesktopSidebar.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/DesktopSidebar.css), [JoinSection.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/JoinSection.css), [App.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/App.css), [search.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/Search.css) and [SigninPage.css](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/SigninPage.css). Resulting in a more readable app design.
 
-![improve ui]()
+![improve ui](assets/week3/Week%203%20-%20Improved%20UI.png)
 
