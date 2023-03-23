@@ -22,3 +22,4 @@ CREATE TABLE public.activities (
   reply_to_activity_uuid integer,
   expires_at TIMESTAMP,
   created_at TIMESTAMP default current_timestamp NOT NULL
+);
