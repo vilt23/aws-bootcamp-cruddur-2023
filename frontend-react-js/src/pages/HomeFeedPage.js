@@ -70,10 +70,11 @@ React.useEffect(()=>{
     <article>
       <DesktopNavigation user={user} active={'home'} setPopped={setPopped} />
       <div className='content'>
-        <ActivityForm  
-          popped={popped}
-          setPopped={setPopped} 
-          setActivities={setActivities} 
+      <ActivityForm
+        user_handle={user}
+        popped={popped}
+        setPopped={setPopped}
+        setActivities={setActivities}
         />
         <ReplyForm 
           activity={replyActivity} 
