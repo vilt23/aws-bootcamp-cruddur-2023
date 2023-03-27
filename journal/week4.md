@@ -25,3 +25,10 @@ Next I create a list of bash files in the bin folder of the backend allowing to 
 ![load schema sql](assets/Week4/Week%204%20-%20Create%20tables%20users%20and%20activities.png)
 
 ![Making bash files executable](assets/Week4/Week%204%20-%20Chmod.png)
+
+Then I create 2 other bash scripts: the file[db-connect](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-connect) to open connection with postgres and [db-seed](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-seed) to load data from the file [seed.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/seed.sql) in the tables. Without forgetting to modify the bash file permission using chmod.
+
+![db-connect](assets/Week4/Week%204%20-%20DB%20connect%20bash.png)
+
+![db-seed](assets/Week4/Week%204%20-%20DB%20seed%20bash.png)
+
