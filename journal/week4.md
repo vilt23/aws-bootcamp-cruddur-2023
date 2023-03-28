@@ -76,7 +76,7 @@ Then I tested the changes by connecting and loading the schema in AWS cruddur Po
 ## Set up Cognito post confirmation lambda
 
 I started by creating a lambda function in AWS using runtime Python 3.8
-Next I created the file [cruddur-post-confirrmation.py]() in the lambda directory of the aws directory of gitpod. This code will later be deploy in the recently created lambda function of AWS. In the Environment variables of the configuration of the lambda function I defined the connection URL of the postgres database. Then I added a specific ARN layer to the function.
+Next I created the file [cruddur-post-confirrmation.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-post-confirrmation.py) in the lambda directory of the aws directory of gitpod. This code will later be deploy in the recently created lambda function of AWS. In the Environment variables of the configuration of the lambda function I defined the connection URL of the postgres database. Then I added a specific ARN layer to the function.
 
 ![create_lambda_function](assets/Week4/Week%204%20-%20Create%20lambda%20function.png)
 
