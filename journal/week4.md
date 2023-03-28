@@ -10,7 +10,7 @@ I created a postgres database using CLI and specifying the name, indentifier, cl
 
 ## Creation and manipulation of Cruddur local Postgres DB
 
-Then I created a postgres user in my local environment and list the databases in that environment.
+I created a postgres user in my local environment and list the databases in that environment.
 ![create local user](assets/Week4/Week%204%20-%20List%20of%20databases.png)
 
 After that I set the connection variables for the environment
@@ -58,7 +58,9 @@ Next I updated the backend service file [home_activity.py](https://github.com/vi
 
 ![home page seed](assets/Week4/Week%204%20-%20HomePage%20Seed%20data.png)
 
-To proceed, I set production environment variable for the connecton URL. Then I created an inbound rule in the database security group to allow connection from my gitpod. Set another environment variable to collect Gitpod IP address everything it is launch. Created a bash script in the bin folder of the backend [rds-update-sg-rule](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/rds-update-sg-rule) including the SG ID and the Rule ID to automatically update the security group with the new IP of the environment. Then update the file [gitpod.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml) to execute it at startup.
+## Configure Gitpod connection to AWS 
+
+I set production environment variable for the connecton URL. Then I created an inbound rule in the database security group to allow connection from my gitpod. Set another environment variable to collect Gitpod IP address everything it is launch. Created a bash script in the bin folder of the backend [rds-update-sg-rule](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/rds-update-sg-rule) including the SG ID and the Rule ID to automatically update the security group with the new IP of the environment. Then update the file [gitpod.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml) to execute it at startup.
 
 ![SG Inbound Rule](assets/Week4/Week%204%20-%20Inbound%20Rule%20AWS%20console.png)
 
@@ -70,4 +72,31 @@ Then I tested the changes by connecting and loading the schema in AWS cruddur Po
 
 ![pro connect](assets/Week4/Week%204%20-%20Prod%20schema%20load.png)
 
+
+## Set up Cognito post confirmation lambda
+
+I started by creating a lambda function in AWS using runtime Python 3.8
+Next I created the file [cruddur-post-confirrmation.py]() in the lambda directory of the aws directory of gitpod. This code will later be deploy in the recently created lambda function of AWS. In the Environment variables of the configuration of the lambda function I defined the connection URL of the postgres database. Then I added a specific ARN layer to the function.
+
+![create_lambda_function](assets/Week4/Week%204%20-%20Create%20lambda%20function.png)
+
+![Lambda Env Var](assets/Week4/Week%204%20-%20Lambda%20env%20var.png)
+
+![lambda layer](assets/Week4/Week%204%20-%20Add%20layer%20to%20lambda.png)
+
+The next step consisted in adding a trigger in Cognito to pass signup user informations to postgres at post confirmation level.
+
+![Cognito lambda trigger](assets/Week4/Week%204%20-%20Cognito%20lambda%20trigger.png)
+
+I modified the execution role of the the lambda function by attaching the a permission i have created to allow network interface management. Then comeback to connect the lambda function to the VPC.
+
+![permissions](assets/Week4/Week%204%20-%20Create%20Policy%20Json.png)
+
+![Attach permission to role](assets/Week4/Week%204%20-%20Attach%20Permission%20policy%20to%20role.png)
+
+![Connect lambda to VPC](assets/Week4/Week%204%20-%20Add%20VPC%20to%20Lambda.png)
+
+Next I signup a new user in the Cruddur app and run a query on the user table of the cruddur database in AWS to verify if the information have been passed.
+
+![user table query](assets/Week4/Week%204%20-%20Select%20all%20from%20users.png)
 
