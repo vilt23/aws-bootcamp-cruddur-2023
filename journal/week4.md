@@ -100,3 +100,27 @@ Next I signup a new user in the Cruddur app and run a query on the user table of
 
 ![user table query](assets/Week4/Week%204%20-%20Select%20all%20from%20users.png)
 
+## Creating activities
+
+This final part consisted of modifying the backend service file [home_activity.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/home_activities.py), [create_activity.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/create_activity.py) and the librairy [db.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/db.py) to allow any registered user to publish activities.
+
+I also created the sql file [create.sql](), [home.sql]() and [object.sql]() with the queries for the db. And updated the code that will be deploy in lambda function in the file [cruddur-post-confirrmation.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-post-confirrmation.py)
+
+![create.sql](assets/Week4/Week%204%20-%20Db%20sql%20activities%20CreateSql.png)
+
+![home.sql](assets/Week4/Week%204%20-%20Db%20sql%20activities%20homeSql.png)
+
+![object](assets/Week4/Week%204%20-%20Db%20sql%20activities%20ObjectSql.png)
+
+Then, in the frontend, I modified the ActivityForm in the page file [HomeFeedPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/HomeFeedPage.js) and the body of component file [ActivityForm.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/ActivityForm.js) to pass the user_uuid to the backend file [app.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py)
+
+![ActivityForm HomeFeedPage.js](assets/Week4/Week%204%20-%20Update%20activity%20form%20in%20frontend%20homefeedPageJs.png)
+
+![Body ActivityForm.js](assets/Week4/Week%204%20-%20Update%20body%20in%20frontend%20component%20ActivityFormJs.png)
+
+![app.py](assets/Week4/Week%204%20-%20Insert%20request%20handler%20in%20app.py%20backend.png)
+
+Allowing users to publish crud in the App
+
+![publish crud](assets/Week4/Week%204%20-%20Posting%20cruds.png)
+
