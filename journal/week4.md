@@ -10,13 +10,14 @@ I created a postgres database using CLI and specifying the name, indentifier, cl
 
 ## Creation and manipulation of Cruddur local Postgres DB
 
-I created a postgres user in my local environment and list the databases in that environment.
+I created a postgres user in my local environment and list the databases of that environment.
+
 ![create local user](assets/Week4/Week%204%20-%20List%20of%20databases.png)
 
 After that I set the connection variables for the environment
 ![env var set](assets/Week4/Week%204%20-%20Connection%20URL.png)
 
-Next I create a list of bash files in the bin folder of the backend allowing to manipulate postgres in the local and in the AWS production environment with minimal overhead: the file [db-create](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-create) to create the cruddur database, [db-drop](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-drop) to drop cruddur database, [db-schema-load](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-schema-load) to load the schema into the db based on the file [schema.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/schema.sql) in the db folder of the backend. Then modify the bash files permissions to make them executable.
+Next I create a list of bash files in the bin folder of the backend allowing to manipulate postgres in the local and in the AWS production environment when use with the argument "prod" with minimal overhead: the file [db-create](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-create) to create the cruddur database, [db-drop](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-drop) to drop cruddur database, [db-schema-load](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db-schema-load) to load the schema into the db based on the file [schema.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/schema.sql) in the db folder of the backend. Then modify the bash files permissions to make them executable.
 
 ![db-create bash](assets/Week4/Week%204%20-%20DB%20create%20bash.png)
 
@@ -76,7 +77,7 @@ Then I tested the changes by connecting and loading the schema in AWS cruddur Po
 ## Set up Cognito post confirmation lambda
 
 I started by creating a lambda function in AWS using runtime Python 3.8
-Next I created the file [cruddur-post-confirrmation.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-post-confirrmation.py) in the lambda directory of the aws directory of gitpod. This code will later be deploy in the recently created lambda function of AWS. In the Environment variables of the configuration of the lambda function I defined the connection URL of the postgres database. Then I added a specific ARN layer to the function.
+Next I created the file [cruddur-post-confirrmation.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-post-confirrmation.py) in the lambda directory of the aws directory of gitpod. This code will later be deployed in the recently created lambda function of AWS. In the Environment variables of the configuration of the lambda function I defined the connection URL of the postgres database. Then I added a specific ARN layer to the function.
 
 ![create_lambda_function](assets/Week4/Week%204%20-%20Create%20lambda%20function.png)
 
@@ -84,7 +85,7 @@ Next I created the file [cruddur-post-confirrmation.py](https://github.com/vilt2
 
 ![lambda layer](assets/Week4/Week%204%20-%20Add%20layer%20to%20lambda.png)
 
-The next step consisted in adding a trigger in Cognito to pass signup user informations to postgres at post confirmation level.
+The next step consisted in adding a trigger in Cognito to pass the signup users informations to postgres at post confirmation level.
 
 ![Cognito lambda trigger](assets/Week4/Week%204%20-%20Cognito%20lambda%20trigger.png)
 
