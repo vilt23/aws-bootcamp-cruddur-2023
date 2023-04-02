@@ -32,3 +32,28 @@ Next I executed the schema load and the list table bash scripts. And proceeded b
 
 ![drop tables](assets/Week5/Week%205%20-%20v1%20ddb%20drop%20table%20cli.png)
 
+The next step consisted in modifying the backend /db/sql file [seed.sql]() to add the email colunm, create the bash script [seed]() to insert data in the database and also the bash script [scan]() to scan the local dynamoDB. Then I executed them.
+
+![seed.sql](assets/Week5/Week%205%20-%20v1%20db%20update%20postgres%20seed%20run%20setup.png)
+
+![scan](assets/Week5/Week%205%20-%20v1%20ddb%20scan%20bash%20script.png)
+
+![seed cli](assets/Week5/Week%205%20-%20v1%20ddb%20see%20data%20cli.png)
+
+![scan cli](assets/Week5/Week%205%20-%20v1%20ddb%20scan%20data%20cli.png)
+
+Then after creating the folder pattern in the backend /bin/ddb directory, I implemented the bash scripts [get-conversation]() and modify some function to pass the needed parameter the other created script [list-conversations](). Then I made them executable and run the scripts.
+
+![def funct db.py](assets/Week5/Week%205%20-%20v1%20db%20lib%20dbPy%20def%20function.png)
+
+![print funct db.py](assets/Week5/Week%205%20-%20v1%20db%20lib%20dbPy%20update%20print%20function.png)
+
+![querry array db.py](assets/Week5/Week%205%20-%20v1%20db%20lib%20dbPy%20update%20querry%20array%20func.png)
+
+![querry object db.py](assets/Week5/Week%205%20-%20v1%20db%20lib%20dbPy%20update%20querry%20object.png)
+
+![get-conversation](assets/Week5/Week%205%20-%20v1%20ddb%20pattern%20get%20conv%20cli.png)
+
+![list-conversations](assets/Week5/Week%205%20-%20v1%20ddb%20pattern%20list%20conv%20cli.png)
+
+
