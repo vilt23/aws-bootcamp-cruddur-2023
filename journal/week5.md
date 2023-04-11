@@ -57,3 +57,18 @@ Then after creating the folder pattern in the backend /bin/ddb directory, I impl
 ![list-conversations](assets/Week5/Week%205%20-%20v1%20ddb%20pattern%20list%20conv%20cli.png)
 
 
+## Implement conversations with DynamoDB
+
+To start I created the librairy file [ddb.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/ddb.py) with the dynamoDB functions and queries that will be needed. And in  the [aap.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) of the backend, I updated the sections messages groups, message_group_uuid and messages to use handles instead of hard coded values.
+
+Then in the bin of the backend, I created the script [list-users](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/cognito/list-users) in the cognito folder and the file [update_cognito_user_ids](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db/update_cognito_user_ids) in the db folder to populate the users. Then set the gitpod environment variable cognito pool ID and updated the setup script with the script [update_cognito_user_ids](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db/update_cognito_user_ids).
+
+I updated the [docke-compose.yml]() file to run against local dynamoDB instead of the prod.
+
+Next I updated the backend service [message_groups.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/message_groups.py) and [messages.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/messages.py) to use data in the database instead of mock data. And create the user query [uuid_from_cognito_user_id.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/sql/users/uuid_from_cognito_user_id.sql) in the sql folder of db in the backend.
+
+Then I updated the frontend pages [MessageGroupsPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupsPage.js) and [MessageGroupPage.jsMessageGroupPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupPage.js), and the frontend component [MessageForm.js ](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageForm.js) with the bearer to handle page authentication.
+
+
+
+
