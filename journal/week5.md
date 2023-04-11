@@ -59,19 +59,49 @@ Then after creating the folder pattern in the backend /bin/ddb directory, I impl
 
 ## Implement conversations with DynamoDB
 
-To start I created the librairy file [ddb.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/ddb.py) with the dynamoDB functions and queries that will be needed. And in  the [aap.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) of the backend, I updated the sections messages groups, message_group_uuid and messages to use handles instead of hard coded values.
+To start I created the librairy file [ddb.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/lib/ddb.py) with the dynamoDB functions and queries that will be needed. And in  the [Aap.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) of the backend, I updated the sections messages groups, message_group_uuid and messages to use handles instead of hard coded values.
+
+![messages groups](assets/Week5/Week%205%20-%20v2%20appPY%20api%20message%20groups.png)
+
+![message_group_uuid](assets/Week5/Week%205%20-%20v2%20backend%20appPY%20api%20messages.png)
+
+![messages](assets/Week5/Week%205%20-%20v2%20backend%20appPY%20create%20message%20def.png)
 
 Then in the bin of the backend, I created the script [list-users](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/cognito/list-users) in the cognito folder and the file [update_cognito_user_ids](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db/update_cognito_user_ids) in the db folder to populate the users. Then set the gitpod environment variable cognito pool ID and updated the setup script with the script [update_cognito_user_ids](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/bin/db/update_cognito_user_ids).
 
+![list-users bash](assets/Week5/Week%205%20-%20v2%20create%20bin%20cognito%20list%20user.png)
+
+![list-users](assets/Week5/Week%205%20-%20v2%20cognito%20list%20user%20cli.png)
+
+![update_cognito_user_ids cli](assets/Week5/Week%205%20-%20v2%20set%20env%20var%20cognito%20user%20pool.png)
+
+![set env cognito pool id](assets/Week5/Week%205%20-%20v2%20set%20env%20var%20cognito%20user%20pool.png)
+
+
+
 I updated the [docke-compose.yml](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/docker-compose.yml) file to run against local dynamoDB instead of the prod and set the variable AWS_ENDPOINT_URL.
 
+![docker aws endpoint url](assets/Week5/Week%205%20-%20%20v2%20define%20endpoint%20url%20docker%20compose.png)
+
+
 Next I updated the backend service [message_groups.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/message_groups.py) and [messages.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/messages.py) to use data in the database instead of mock data. And create the user query [uuid_from_cognito_user_id.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/sql/users/uuid_from_cognito_user_id.sql) in the sql folder of db in the backend.
+
+![message_group.py](assets/Week5/Week%205%20-%20v2%20backend%20service%20messageGroupsPY.png)
+
+![message.py](assets/Week5/Week%205%20-%20v2%20backend%20services%20messagesPY.png)
+
+![uuid_from_cognito_user_id.sql](assets/Week5/Week%205%20-%20v2%20db%20sql%20users%20uuid%20from%20cognito%20user%20ids.png)
+
 
 Then I updated the frontend pages [MessageGroupsPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupsPage.js) and [MessageGroupPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupPage.js), and the frontend component [MessageForm.js ](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageForm.js) with the bearer to handle page authentication.
 
 I created the file [CheckAuth.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/lib/CheckAuth.js) in the lib of the frontend to be imported in pages like [HomeFeedPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/HomeFeedPage.js), [MessageGroupsPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupsPage.js) and [MessageGroupPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupPage.js) instead of being defined over and over again. 
 
+![CheckAuth.js](assets/Week5/Week%205%20-%20v3%20frontend%20lib%20checkauthJS.png)
+
 Next in the frontend file [App.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/App.js), I modified the paths of the elements: MessageGroupsPage, MessageGroupPage, MessageGroupNewPage and the backend url endpoint of the page [MessageGroupPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupPage.js). I also modified the frontend components  [MessageForm.js ](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageForm.js) and [MessageGroupItem.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageGroupItem.js) to use the paramater message_group.uuid instead of the handle.
+
+![app.js elements](assets/Week5/Week%205%20-%20v3%20frontend%20appJs.png)
 
 Then I modified the backend service file [messages.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/messages.py)[message_groups.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/message_groups.py) and [create_message.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/create_message.py) to query the data instead of using mock data.
 
@@ -79,6 +109,13 @@ Next in the user directory of sql in the db folder, I created the the sql file [
 
 
 I also modified the sql file [seed.sql]() in the db directory of the backend to insert the new user Londo. And proceed to create the new api endpoint short in the [App.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) of the backend by creating the backernd service file [users_short.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/users_short.py) and the sql file [short.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/sql/users/short.sql)  in the user directory of sql in the db folder. Then I created the frontend component [MessageGroupItem.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageGroupItem.js) and incorporate it the frontend component [MessageGroupFeed.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageGroupFeed.js)
+
+![seed.sql](assets/Week5/Week%205%20-%20v2%20add%20personal%20user%20in%20db%20seedsql.png)
+
+![App.py short](assets/Week5/Week%205%20-%20v3%20backend%20appPy%20short.png)
+
+![short.sql](assets/Week5/Week%205%20-%20v2%20backend%20db%20sql%20user%20shortsql.png)
+
 
 
 
