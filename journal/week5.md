@@ -107,6 +107,7 @@ Then I modified the backend service file [messages.py](https://github.com/vilt23
 
 Next in the user directory of sql in the db folder, I created the the sql file [create_message_users.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/sql/users/create_message_users.sql) that is used by the [create_message.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/create_message.py). And create the frontend pages [MessageGroupNewPage.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/pages/MessageGroupNewPage.js) 
 
+! [create_message_users.sql](assets/Week5/Week%205%20-%20v2%20backend%20db%20sql%20user%20create%20message%20users.png)
 
 I also modified the sql file [seed.sql]() in the db directory of the backend to insert the new user Londo. And proceed to create the new api endpoint short in the [App.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/app.py) of the backend by creating the backernd service file [users_short.py](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/services/users_short.py) and the sql file [short.sql](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/backend-flask/db/sql/users/short.sql)  in the user directory of sql in the db folder. Then I created the frontend component [MessageGroupItem.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageGroupItem.js) and incorporate it the frontend component [MessageGroupFeed.js](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/frontend-react-js/src/components/MessageGroupFeed.js)
 
@@ -115,6 +116,42 @@ I also modified the sql file [seed.sql]() in the db directory of the backend to 
 ![App.py short](assets/Week5/Week%205%20-%20v3%20backend%20appPy%20short.png)
 
 ![short.sql](assets/Week5/Week%205%20-%20v2%20backend%20db%20sql%20user%20shortsql.png)
+
+Allowing me to initiate new conversation with users.
+
+![Londo new message](assets/Week5/Week%205%20-%20v3%20londo%20new%20message.png)
+
+
+## Implement DynamoDB Stream
+
+First in the bin of the backend, I updated the ddb [file schema-load]() with the message_group_uuid attribute and the global secondary indexes. Next I created the cruddur-messages table in AWS dynamoDB using the cli and turn on stream using the new image type. 
+
+![create dynamodb table cli](assets/Week5/Week%205%20-%20v4%20dynamoDB%20table%20bash.png)
+
+![create dynamodb table console](assets/Week5/Week%205%20-%20v4%20dynamoDB%20table%20console.png)
+
+![turn on stream](assets/Week5/Week%205%20-%20v4%20dynamoDB%20table%20turnon%20stream.png)
+
+
+
+To proceed, I created a vpc endpoint ddb-cruddur connected to dynamoDB and the python lambda function [cruddur-messaging-stream](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/lambdas/cruddur-messaging-stream.py) in the default VPC that will be trigger by dynamoDB. I attached the aws managed policy AWSLambdaInvocation-DynamoDB and the custom policy [cruddur-message-stream-policy.json](https://github.com/vilt23/aws-bootcamp-cruddur-2023/blob/main/aws/policies/cruddur-message-stream-policy.json) 
+
+![lambda function](assets/Week5/Week%205%20-%20v4%20create%20cruddur%20messaging%20stream%20lambda.png)
+
+![vpc endpoint](assets/Week5/Week%205%20-%20v4%20create%20vpc%20endpoint%20aws%20conole.png)
+
+![role policies](assets/Week5/Week%205%20-%20v4%20attach%20policy%20to%20lambda%20role.png)
+
+Then I add a trigger in the dynamoDB tables that will launch the lambda function on each event and modified the file [docker-compose.yml]() to make the app use the prod environment. Next I started new conversations and verified the if things worked as expected.
+
+![add dynamodb trigger](/assets/Week5/Week%205%20-%20v4%20creat%20dynamodb%20trigger.png)
+
+![message prod](assets/Week5/Week%205%20-%20v4%20test%20messaging%20prod%20dynamodb.png)
+
+![explore items](assets/Week5/Week%205%20-%20v4%20dynamodb%20explore%20items.png)
+
+![lambda logs](assets/Week5/Week%205%20-%20v4%20lambda%20logs.png)
+
 
 
 
