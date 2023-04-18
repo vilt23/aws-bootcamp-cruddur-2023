@@ -8,20 +8,7 @@
     "requiresCompatibilities": [ 
       "FARGATE" 
     ],
-    "containerDefinitions": [
-      {
-        "name": "xray",
-        "image": "public.ecr.aws/xray/aws-xray-daemon" ,
-        "essential": true,
-        "user": "1337",
-        "portMappings": [
-          {
-            "name": "xray",
-            "containerPort": 2000,
-            "protocol": "udp"
-          }
-        ]
-      },
+    "containerDefinitions": [      
       {
         "name": "backend-flask",
         "image": "300144354895.dkr.ecr.us-east-1.amazonaws.com/backend-flask",
